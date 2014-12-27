@@ -1,0 +1,4 @@
+struts.properties为国际化配置文件
+globalMessages_en.properties和globalMessages_zh.properties分别为英文和中文的配置文件
+
+web.xml文件必须放在WEB——INF文件目录下，否则容易引起错误

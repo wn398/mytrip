@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+<!-- 用struts2标签时采用简单主题 -->
+<constant name="struts.ui.theme" value="simple"/>
+<constant name="struts.i18n.encoding" value="UTF-8"/>
+
+<!--下面的配置影响对servlet的请求，并且影响一些服务器输出的编码问题 ，花了两天时间-->
+<constant name="struts.action.extension" value="action,''"/>
+
+<!-- 用spring的工厂替换struts的action工厂 -->
+<constant name="struts.server.static.browserCache" value="false"/>
+<constant name="struts.configuration.xml.reload" value="true"/>
+<constant name="struts.devMode" value="true"/>
+<constant name="struts.locale" value="UTF-8" />
+
+<!--  
+<constant name="struts.ogjectFactory" value="spring"/>
+-->
+
+<constant name="struts.multipart.maxSize" value="10701096"/>
+
+
+<package name="struts" extends="struts-default">
+
+  
+<action name="AdminAction" class="AdminAction">
+<result name="success">/admin.jsp</result>
+<result name="input">/adminload.jsp</result>
+</action>
+
+
+<action name="ValidationCode" class="com.trip.Servlet.ValidationCode">
+<result>/ValidationCode</result>
+</action>
+ 
+ <action name="Wish_comment_*" class="Wish_comment_Action" method="{1}">
+  <result></result>
+ </action>
+
+  <action name="User_*" class="User_Action" method="{1}">
+      <result name="register_success">/user_load.jsp</result>
+      <result name="input">/user_register.jsp</result>
+      <result name="load_success" type="redirect">/user_index.jsp</result>
+      <result name="load_failure">/user_load.jsp</result>
+       <result name="update_success">/user_index.jsp</result>
+       <result name="updateAvatar_success" type="redirect">/user_index.jsp</result>
+       <result name="random_success">/visitor_index.jsp</result>
+        <!--  <result name="showMyAlbum_success">/upload_photo.jsp</result>-->
+        
+  </action>
+  
+  <action name="Photo_comment_*" class="Photo_comment_Action" method="{1}">
+  <result></result>
+  </action>
+  
+  <action name="Photo_*" class="Photo_Action" method="{1}">
+  <!--  
+  <result name="delAlbumByPhoto_success" type="redirect">/user_album.jsp</result>
+  -->
+  </action>
+  
+  <action name="Micro_wish_*" class="Micro_wish_Action" method="{1}">
+  <result></result>
+  </action>
+  
+  <action name="Friend_categroy_*" class="Friend_categroy_Action" method="{1}">
+  <result></result>
+  </action>
+  
+  <action name="Friend_*" class="Friend_Action" method="{1}">
+  <result></result>
+  </action>
+  
+  <action name="Article_comment_*" class="Article_comment_Action" method="{1}">
+  <result></result>
+  </action>
+  
+  <action name="Article_categroy_*" class="Article_categroy_Action" method="{1}">
+  <result ></result>
+  </action>
+  
+  <action name="Article_*" class="Article_Action" method="{1}">
+  <result name="addArticle_success">/user_index.jsp</result>
+  <result name="updateArticle_success">/user_index.jsp</result>
+  <result name="updateArticle_faiture">/index.jsp</result>
+  <result name="input">/index.jsp</result>
+  <result name="showAllArticle_success">/user_index.jsp</result>
+  </action>
+  
+  <action name="Album_*" class="Album_Action" method="{1}">
+    <result name="delAlbum_success" type="redirect">/user_album.jsp</result>
+    <result name="showPhoto_success">/show_album.jsp</result>
+    <result name="input">/user_album.jsp</result>
+  </action>
+  
+  <!-- 上文件的Action -->
+  <action name="UploadAction" class="UploadAction" method="upload">
+  </action>
+  <!--上传头像 -->
+  <action name="Upload_avatar" class="com.trip.util.Upload_avatar">
+  <result name="upload_success">/user_update.jsp</result>
+  </action>
+</package>
+
+<!--  
+<package name="struts" extends="struts-default">
+  
+  <action name="userlogin" class="saveUserAction">
+    <result name="success">/success.jsp</result>
+    <result name="input">/login.jsp</result>
+  </action>
+
+
+  <action name="alluseraction" class="showalluser">
+   <result name="success">/showalluser.jsp</result>
+   <result name="input">/login.jsp</result>
+   </action>
+   
+   
+   <action name="deleteuser" class="deleteuser">
+   <result name="success" type="redirect">alluseraction.action</result>
+   <result name="input">/login.jsp</result>
+   </action>
+</package>
+-->
+</struts>
+    

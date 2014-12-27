@@ -1,0 +1,254 @@
+@charset "utf-8";
+/* CSS Document */
+
+.top-pic {
+	position: fixed;
+}
+.name-imput {
+}
+
+
+body {background-image:url(../images/bg.gif); margin:0px; padding-top:15px; font-family: sans-serif; font-size:13px; color:#222222}
+td {vertical-align: top; line-height:20px}
+h1 {font-size:18px; font-weight:normal; padding:0px; margin:0px}
+.main-table {border: 1px solid #FFFFFF; background-color:#FFFFFF; width:100%}
+.style1 {font-size: 13px}
+
+.top-img {background-image: url(../images/top-bg.jpg); height:250px; padding-left:450px; color:#FFFFFF}
+.website-title {font-family: "Trebuchet MS", Arial; color: #FFFFFF; text-align: right; font-size:34px; letter-spacing:-1px;}
+.menu {height:35px; vertical-align:middle; padding-left:10px; padding-right:10px; }
+.table-corners {width:900px;}
+.bg-white {background-color:#FFFFFF}
+.corner1 {background-image:url(../images/corner1.gif); width:20px; height:20px}
+.corner2 {background-image:url(../images/corner2.gif); width:20px; height:20px}
+.corner3 {background-image:url(../images/corner3.gif); width:20px; height:20px}
+.corner4 {background-image:url(../images/corner4.gif); width:20px; height:20px}
+a.menu-link { background-image:url(../image/menu-sep.gif); height:30px; line-height:30px; background-position: right; background-repeat:no-repeat; padding-left:7px; padding-right:14px; padding-top:6px; padding-bottom:6px; font-family: tahoma; font-size:15px; color:#FFFFFF; text-decoration:none; font-weight:bold}
+a.menu-link:hover { background-image:url(../images/menu-bg_hover.gif); background-position:center; background-repeat:repeat-x; color:#FFE7CF}
+.content {padding-top:25px; padding-left:2px; padding-right:60px; padding-bottom:35px}
+.content-right {padding-top:60px}
+a.made-in {color:#aaaaaa }
+.made-in_text {
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #aaaaaa;
+	padding-left:3px;
+	padding-bottom:15px
+}
+a.menu-right, a.menu-right:visited {font-size: 18px; line-height:30px; padding-left:20px; text-decoration:none; color:#aaaaaa; background-color:#FAFAFA; width:200px; display:block; border-bottom:#CCCCCC solid 1px}
+a.menu-right:hover {background-color:#2679B7; color:#D8E9F1}
+
+
+
+
+
+
+
+
+
+
+/*登录框的div*/
+
+#sidebar h3 {
+	font-size:12px;
+	font-weight:normal;
+	background:url(../images/warning.gif) no-repeat left center;
+	padding:0 0 0 20px;
+}
+#sidebar form * {
+	display:block;
+	margin:8px 0;
+}
+#sidebar form label {
+	font-weight:bold;
+}
+#sidebar form input.text {
+	width:160px;
+	height:18px;
+	border:1px solid #999;
+	background:#fff;
+	color:#999;
+}
+#sidebar form input.username {
+	background:url(../images/username.gif) no-repeat 2px center;
+	padding:0 0 0 20px;
+}
+#sidebar form input.password {
+	background:url(../images/password.gif) no-repeat 2px center;
+	padding:0 0 0 20px;
+}
+#sidebar form a {
+	width:180px;
+	color:#f60;
+}
+#sidebar form input.submit {
+	width:70px;
+	height:21px;
+	background:url(../images/loginin.gif) no-repeat;
+	border:none;
+	cursor:pointer;
+	margin:0 0 0 60px;
+}
+
+
+
+
+
+
+
+
+/*发表文章*/
+
+#primarycontent
+{
+	position: relative;
+	width: 680px;
+	float: left;
+}
+
+#primarycontent h3
+{
+position: relative;
+top: 4px;
+font-size: 18px;
+line-height: 25px;
+color: #656551;
+letter-spacing: -1px;
+background: url('../images/a22.gif') bottom repeat-x;
+padding: 0px 0px 10px 15px;
+margin-bottom: 20px;
+}
+
+#primarycontent .content
+{
+padding: 0px 15px 0px 15px;
+margin-bottom: 20px;
+}
+
+#primarycontent .post
+{
+margin-bottom: 30px;
+}
+
+#primarycontent .post .header
+{
+position: relative;
+}
+
+#primarycontent .post .date
+{
+position: absolute;
+right: 15px;
+top: 0px;
+line-height: 35px;
+color: #AFAFA4;
+font-weight: bold;
+}
+
+#primarycontent .post .content
+{
+margin-bottom: 0px;
+}
+
+#primarycontent .post .footer
+{
+position: relative;
+top: -10px;
+background: url('../images/a33.gif') repeat-x;
+height: 64px;
+}
+
+#primarycontent .post .footer ul
+{
+list-style: none;
+position: absolute;
+right: 15px;
+bottom: 15px;
+}
+
+#primarycontent .post .footer ul li
+{
+display: inline;
+line-height: 14px;
+padding-left: 17px;
+margin-left: 25px;
+background-repeat: no-repeat;
+background-position: 0px 2px;
+}
+
+#primarycontent .post .footer ul li.printerfriendly
+{
+background-image: url('../images/a41.gif');
+}
+
+#primarycontent .post .footer ul li.comments
+{
+background-image: url('../images/a36.gif');
+}
+
+#primarycontent .post .footer ul li.readmore
+{
+background-image: url('../images/a38.gif');
+}
+
+
+
+/*后台登陆*/
+#top
+{
+	position: relative;
+	width: 1100px;
+	float: left;
+	background-color:#FFFFFF
+}
+	
+	}
+
+#left
+{
+	position: relative;
+	width: 200px;
+	float: left;
+	background-color:#FFFFFF
+}
+
+#left .infolead
+{
+	position: relative;
+	width: 200px;
+	float: left;
+	
+}
+
+
+
+
+
+#infotable
+{
+	position: relative;
+	width: 800px;
+	float: left;
+	background-color:#FFFFFF
+}
+
+
+
+
+
+#infotable .post
+{
+margin-bottom: 30px;
+}
+
+#infotable .post .header
+{
+position: relative;
+}
+
+
+
+#infotable .post .content
+{
+margin-bottom: 0px;
+}

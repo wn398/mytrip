@@ -1,0 +1,72 @@
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif;  margin:0 auto; }
+table{border-collapse:collapse;border-spacing:0;}
+
+.clearfloat{height:0;font-size:1px;clear:both;line-height:0;}
+
+a{color:#333;text-decoration:none;}
+a:hover{color:#ef9b11; text-decoration:underline;}
+
+.dis {
+	DISPLAY: block
+}
+.undis {
+	DISPLAY: none
+}
+.box{ width:640px; margin:20px auto;}
+#focuspic {
+	BACKGROUND: #2e2e2e; WIDTH: 640px; PADDING-TOP: 10px; HEIGHT: 479px
+}
+#focuspic .imgWrap {
+	MARGIN: 0px auto; WIDTH: 620px; POSITION: relative; HEIGHT: 370px
+}
+#focuspic .imgWrap img{ width:620px; height:370px;}
+#focuspic .imgbox {
+	Z-INDEX: 99; MARGIN: 0px auto; WIDTH: 620px; POSITION: absolute; HEIGHT: 370px
+}
+#focuspic .imgWrap .txtbg {
+	Z-INDEX: 999; BACKGROUND: none transparent scroll repeat 0% 0%; FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src='http://www.niutuku.com/myweb/hihilinxuan/template/hihilinxuan/cssjs/201008/qqpic/images/pic_bg.png'); LEFT: 0px; WIDTH: 620px; POSITION: absolute; TOP: 267px; HEIGHT: 103px
+}
+#focuspic .ftxt {
+	Z-INDEX: 9999; LEFT: 0px; OVERFLOW: hidden; WIDTH: 620px; LINE-HEIGHT: 23px; POSITION: absolute; TOP: 283px; HEIGHT: 90px
+}
+#focuspic .ftxt P {
+	MARGIN: 0px auto; WIDTH: 585px
+}
+#focuspic .ftxt .colfff {
+	FONT-SIZE: 20px; COLOR: #fff; FONT-FAMILY: 
+}
+#focuspic .ftxt .colfff A {
+	COLOR: #fff
+}
+#focuspic .ftxt .colfff A:visited {
+	COLOR: #fff
+}
+#focuspic .ftxt .colfff A:hover {
+	COLOR: #fff
+}
+#focuspic .ftxt .colhui {
+	COLOR: #c1c1c1
+}
+#focuspic .ftxt .mart10 {
+	MARGIN-TOP: 10px
+}
+.thumbWrap {
+	MARGIN: 9px auto 0px; WIDTH: 628px
+}
+.thumbWrap DIV {
+	DISPLAY: inline; FLOAT: left; MARGIN: 0px 4px 0px 3px; WIDTH: 150px; CURSOR: pointer; HEIGHT: 93px
+}
+.thumbWrap DIV IMG {
+	MARGIN: 0px; WIDTH: 150px; HEIGHT: 90px
+}
+.thumbWrap DIV.on IMG {
+	BORDER-BOTTOM: #f00 3px solid
+}
+.thumbWrap DIV.off IMG {
+	BACKGROUND: #000; FILTER: alpha(Opacity=60); -moz-opacity: 0.6
+}
+

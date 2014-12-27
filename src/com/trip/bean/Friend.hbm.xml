@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.trip.bean.Friend" table="t_friend" >
+		<id name="id" column="friend_id" length="12">
+			<generator class="native" />
+		</id>
+		<property name="friender_id" column="friender_id"/>
+		<property name="remark_name" column="remark_name" length="30"/>
+		<property name="add_friend_time" column="add_friend_time"/>
+		
+		<many-to-one name="user" column="user_id"/>
+		<many-to-one name="friend_categroy" column="friend_categroy_id"/>
+		
+		
+		
+		
+	</class>
+</hibernate-mapping>	

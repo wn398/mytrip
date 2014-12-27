@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.trip.bean.Photo" table="t_photo" >
+		<id name="id" column="photo_id" length="12">
+			<generator class="native" />
+		</id>
+		<property name="personal_photo" column="personal_photo" length="100"/>
+		<property name="photo_introduction" column="photo_introduction" length="140"/>
+		
+			
+		<set name="photo_comments" inverse="true" cascade="delete" >
+		<key  column="photo_id"/>
+		<one-to-many class="com.trip.bean.Photo_comment"/>
+		</set>
+		
+		
+		<many-to-one name="user" column="user_id" lazy="false"/>
+		<many-to-one name="album" column="album_id"/>
+		
+	</class>
+</hibernate-mapping>	

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.trip.bean.Friend_categroy" table="t_friend_categroy" >
+		<id name="id" column="friend_categroy_id" length="12">
+			<generator class="native" />
+		</id>
+		<property name="friend_categroy_name" column="friend_categroy_name"/>
+		
+		<many-to-one name="user" column="user_id"/>
+		<set name="friends" inverse="true" fetch="join">
+		<key column="friend_categroy_id"/>
+		<one-to-many class="com.trip.bean.Friend"/>
+		</set>
+		
+		
+		
+		
+	</class>
+</hibernate-mapping>	

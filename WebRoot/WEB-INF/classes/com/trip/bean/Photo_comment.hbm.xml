@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.trip.bean.Photo_comment" table="t_photo_comment" >
+		<id name="id" column="photo_comment_id" length="12">
+			<generator class="native" />
+		</id>
+		<property name="commenter_id" column="commenter_id"/>
+		<property name="comment_content" column="comment_content" length="140"/>
+		<property name="comment_time"  column="comment_time"/>
+		
+		<many-to-one name="photo" column="photo_id"/>
+		
+	</class>
+</hibernate-mapping>	

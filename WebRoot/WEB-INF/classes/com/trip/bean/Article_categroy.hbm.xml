@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.trip.bean.Article_categroy" table="t_article_categroy" >
+		<id name="id" column="article_categroy_id" length="12">
+			<generator class="native" />
+		</id>
+		<property name="categroy_name" column="categroy_name" length="80"/>
+		<property name="categroy_level" column="categroy_level"/>
+		
+		<set name="articles" fetch="join" inverse="true" >
+		     <key column="article_categroy_id"/>
+		 <one-to-many class="com.trip.bean.Article"/>
+		</set>
+		<many-to-one name="User" column="user_id"/>
+		
+	</class>
+</hibernate-mapping>	

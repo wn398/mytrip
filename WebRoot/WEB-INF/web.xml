@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+<!--下面为加入struts2支持 -->
+<filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+ </filter>
+  
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern>  
+  </filter-mapping>
+  
+  <!-- 配置opensessioninview解决懒加载,本质一个过滤器. -->
+    <filter>
+  	<filter-name>OpenSessionInViewFilter</filter-name>
+  	<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>OpenSessionInViewFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+ 
+  
+
+  <!-- 指定spring的配置文件，默认从web根目录寻找配置文件，我们可以通过spring提供的classpath:前缀指定从类路径下寻找 -->
+<!--  
+<context-param>
+   <param-name>contextConfigLocation</param-name>
+   <param-value>classpath:applicationContext.xml</param-value>
+</context-param>
+-->
+    <!-- 下面为加入spring 支持 --> 
+  <listener>
+   <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+ 
+
+
+
+  <servlet>
+    <servlet-name>ValidationCode</servlet-name>
+    <servlet-class>com.trip.Servlet.ValidationCode</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PicUpload</servlet-name>
+    <servlet-class>test.PicUpload</servlet-class>
+  </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>ValidationCode</servlet-name>
+    <url-pattern>/ValidationCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PicUpload</servlet-name>
+    <url-pattern>/PicUpload</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

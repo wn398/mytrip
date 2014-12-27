@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.trip.bean.Article_comment" table="t_article_comment" >
+		<id name="id" column="article_comment_id" length="12">
+			<generator class="native" />
+		</id>
+		<property name="comment_content" column="comment_content" length="140"/>
+		<property name="comment_person_id" column="comment_person_id"/>
+		<property name="comment_time"  column="comment_time"/>
+		
+		<many-to-one name="article" column="article_id" />
+	</class>
+</hibernate-mapping>	

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.trip.bean.Micro_wish" table="t_micro_wish" >
+		<id name="id" column="album_id" length="12">
+			<generator class="native" />
+		</id>
+		<property name="wish_content" column="wish_content" length="160"/>
+		<property name="add_wish_time" column="add_wish_time" />
+		
+		<many-to-one name="user" column="user_id"/>
+		
+		<set name="wish_comment" inverse="true" cascade="delete">
+		<key column="wish_id"/>
+		<one-to-many class="com.trip.bean.Wish_comment" />
+		</set>
+		
+	</class>
+</hibernate-mapping>	
